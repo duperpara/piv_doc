@@ -1,0 +1,122 @@
+
+% ---
+% Pacotes básicos
+% ---
+\usepackage{bookmark}				% Usa a fonte Bookman Old Style
+\usepackage[T1]{fontenc}			% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{microtype} 			% para melhorias de justificação
+\usepackage{amsmath}
+\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+\usepackage{float}
+\usepackage{url}
+\usepackage{enumerate}
+\usepackage{siunitx}
+\usepackage{setspace}
+\usepackage[euler]{textgreek}
+
+%%%%%%%%% NOVO
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    bookmarksopen=true,
+}
+\urlstyle{same}
+
+%%%   letra capitular
+\usepackage{lettrine}
+\usepackage{palatino}
+
+%%%    tabelas - configuração
+\usepackage{booktabs}
+\usepackage{siunitx}
+
+\usepackage{lscape}
+
+
+%%% lista de abreviações e siglas automática 
+\usepackage{acro}
+
+
+%%%%%% estilo do capítulo
+%%%%%% escolha 1 e tire o comentário
+%% acesse a página e escolha
+%%http://ctan.math.washington.edu/tex-archive/info/latex-samples/MemoirChapStyles/MemoirChapStyles.pdf
+
+%% primeiro
+%\chapterstyle{madsen}
+
+%% segundo
+%\chapterstyle{southall}
+
+%% terceiro
+%\chapterstyle{Ger}
+
+%% quarto
+%\chapterstyle{verville}
+
+%% quinto
+\setlength\midchapskip{10pt}
+\makechapterstyle{VZ23}{
+    \renewcommand\chapternamenum{}
+    \renewcommand\printchaptername{}
+    \renewcommand\chapnumfont{\Huge\bfseries\centering}
+    \renewcommand\chaptitlefont{\Huge\scshape\centering}
+    \renewcommand\afterchapternum{%
+        \par\nobreak\vskip\midchapskip\hrule\vskip\midchapskip}
+    \renewcommand\printchapternonum{%
+        \vphantom{\chapnumfont \thechapter}
+        \par\nobreak\vskip\midchapskip\hrule\vskip\midchapskip}
+}
+\chapterstyle{VZ23}
+
+%%%%%%%%%%%%%
+
+\titulo{Projeto Integrador V}
+\autor{Henrique G. Silvério \\ Luiz F. Niquelatte \\ Matheus G. Zweibrucker}
+\local{Florianópolis - Santa Catarina}
+\data{Setembro de 2022}
+\instituicao{%
+  Instituto Federal de Santa Catarina - IFSC
+  \par
+  Campus Florianópolis}
+\preambulo{Trabalho submetido à avaliação, como requisito parcial, para a obtenção de nota na disciplina de Projeto Integrador, ministrada pelos professores Francisco Rafael Moreira da Mota e Valdir Noll}
+
+
+% Informações do PDF
+\makeatletter
+\hypersetup{
+    	%pagebackref=true,
+	pdftitle={\@title}, 
+	pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+    pdfcreator={LaTeX with abnTeX2},
+	pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico},
+	bookmarksdepth=4
+}
+\makeatother
+
+% --- 
+% Espaçamentos entre linhas e parágrafos 
+% --- 
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+%\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+%\setbeforesecskip{3em}
+%\setbeforesubsecskip{3em}
+
+% ---
+% compila o indice
+% ---
+\makeindex
